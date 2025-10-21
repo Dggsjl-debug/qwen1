@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Знакомства</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: url('./assets/bg.jpg') center/cover no-repeat fixed;
+      backdrop-filter: blur(8px);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0,0,0,0.6);
+      background-blend-mode: darken;
+      color: white;
+      overflow-x: hidden;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 25px 20px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 90%;
+      width: 100%;
+      backdrop-filter: blur(5px);
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      line-height: 1.4;
+    }
+    button {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 8px 0;
+      width: 100%;
+      backdrop-filter: blur(5px);
+      letter-spacing: 0.5px;
+    }
+    button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.02);
+    }
+    .hidden {
+      display: none;
+    }
+
+    /* Мобильная адаптация */
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 15px;
+        margin: 10px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      button {
+        font-size: 15px;
+        padding: 10px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="agePage">
+    <h1 id="ageTitle">Подтвердите, что вам есть 18 лет</h1>
+    <button id="ageConfirmBtn">Да, мне есть 18 лет</button>
+  </div>
+
+  <div class="container hidden" id="goalPage">
+    <h1 id="goalTitle">Какова ваша цель знакомства?</h1>
+    <button class="goal-btn" data-goal="relationship">Отношения</button>
+    <button class="goal-btn" data-goal="casual">Случайный секс</button>
+    <button class="goal-btn" data-goal="friendship">Дружба</button>
+    <button class="goal-btn" data-goal="chat">Просто пообщаться</button>
+    <button class="goal-btn" data-goal="other">Другое</button>
+  </div>
+
+  <canvas id="bot-canvas" style="display:none;"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

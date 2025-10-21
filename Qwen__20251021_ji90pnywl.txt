@@ -1,0 +1,5 @@
+/landing/
+├── index.html
+├── assets/
+│   └── bg.jpg          ← ваше фоновое изображение
+└── script.js
